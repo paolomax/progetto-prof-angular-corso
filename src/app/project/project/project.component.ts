@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project.component.css']
 })
 export class ProjectComponent implements OnInit {
-
+  label = "Io sono una label";
   constructor() { }
 
   ngOnInit(): void {
