@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Project } from '@app/models/Project';
 
 @Component({
@@ -54,6 +55,10 @@ export class ProjectComponent implements OnInit {
 
   selectProject(project: Project) {
     this.selectedProject = project;
+  }
+
+  submitProjectForm(f: NgForm) {
+    console.log("form submit",f );
   }
 
 }
