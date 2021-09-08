@@ -1,4 +1,4 @@
-<div class="row row-cols-1 row-cols-md-2 g-4">
+<div class="row row-cols-1 row-cols-md-2 g-4" *nfIf="projects.length > 0">
     <div class="col" *ngFor="let project of projects">
         <div class="card">
             <div class="card-body">
@@ -12,7 +12,7 @@
             <div class="card-footer">
                 <small class="text-muted">
                     <span>{{ project.start }}</span>
-                    <span> | {{ project.end }}</span>
+                    <span *ngIf="project.end"> | {{ project.end }}
                 </small>
             </div>
         </div>
