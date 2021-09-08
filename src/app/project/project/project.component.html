@@ -1,18 +1,18 @@
 <div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col">
+    <div class="col" *ngFor="let project of projects">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">
-                    <span class="badge bg-secondary rounded-pill">{{ projects[0].code  }}</span>
-                    {{ projects[0].name }}
+                    <span class="badge bg-secondary rounded-pill">{{ project.code  }}</span>
+                    {{ project.name }}
                 </h5>
-                <p class="card-text">{{ projects[0].description }}</p>
+                <p class="card-text">{{ project.description }}</p>
                 <a href="#" class="btn btn-primary btn-sm ">Vai al Progetto</a>
             </div>
             <div class="card-footer">
                 <small class="text-muted">
-                    <span>{{ projects[0].start }}</span>
-                    <span> | {{ projects[0].end }}</span>
+                    <span>{{ project.start }}</span>
+                    <span> | {{ project.end }}</span>
                 </small>
             </div>
         </div>
