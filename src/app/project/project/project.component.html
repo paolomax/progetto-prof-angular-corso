@@ -1,6 +1,6 @@
-<div class="row row-cols-1 row-cols-md-2 g-4" *nfIf="projects.length > 0; else noProjects">
+<div class="row row-cols-1 row-cols-md-2 g-4" *ngIf="projects.length > 0; else noProjects">
     <div class="col" *ngFor="let project of projects">
-        <div class="card">
+        <div class="card" [ngClass]="{'border-info': project.done, 'border-warning': !project.done}">
             <div class="card-body">
                 <h5 class="card-title">
                     <span class="badge bg-secondary rounded-pill">{{ project.code  }}</span>
@@ -12,7 +12,7 @@
             <div class="card-footer">
                 <small class="text-muted">
                     <span>{{ project.start }}</span>
-                    <span *ngIf="project.end"> | {{ project.end }}
+                    <span *ngIf="project.end"> | {{ project.end }} </span>
                 </small>
             </div>
         </div>
