@@ -9,7 +9,7 @@
                     {{ project.name }}
                 </h5>
                 <p class="card-text">{{ project.description }}</p>
-                <button [disabled]="project.done" class="btn btn-primary btn-sm ">Vai al Progetto</a>
+                <button class="btn btn-primary btn-sm" (click)="selectProject(project)">Vai al Progetto</button>
             </div>
             <div class="card-footer">
                 <small class="text-muted" [ngStyle]="{'font-style': project.done ? 'italic' : 'normal'}"
@@ -31,3 +31,5 @@
 <ng-template #noProjects>
     <p>Non è presente nessun progetto</p>
 </ng-template>
+
+<p *ngIf="selectedProject">Progetto Selezionato: {{selectedProject.name}}</p>

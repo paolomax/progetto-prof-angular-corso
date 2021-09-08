@@ -9,6 +9,8 @@ import { Project } from '@app/models/Project';
 
 export class ProjectComponent implements OnInit {
 
+  selectedProject !: Project;
+
   projects: Project[] = [
     {
       id: 1,
@@ -48,6 +50,10 @@ export class ProjectComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  selectProject(project: Project) {
+    this.selectedProject = project;
   }
 
 }
