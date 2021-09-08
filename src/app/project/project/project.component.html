@@ -16,8 +16,12 @@
                 [style.fontSize]="'30px'">
                 <!-- Si puó assegnare l'unità di misura direttamente dentro le parentesi quadre
                 e inserendo a destra dell'uguale il numero puro [style.fontSize.px] = "30"; -->
+                    <span>{{ project.start | date | uppercase}}</span>
+                    <br>
+                    <span>{{ project.start | date: 'dd/MMMM/yyyy' | titlecase}}</span>
+                    <br>
                     <span>{{ project.start }}</span>
-                    <span *ngIf="project.end"> | {{ project.end }} </span>
+                    <!-- <span *ngIf="project.end"> | {{ project.end }} </span> -->
                 </small>
             </div>
         </div>
