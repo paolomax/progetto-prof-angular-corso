@@ -58,7 +58,7 @@ export class ProjectComponent implements OnInit {
   }
 
   submitProjectForm(f: NgForm) {
-    console.log("form submit",f );
+    console.log("form submit",f.value);
   }
 
 }
