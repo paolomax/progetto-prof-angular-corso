@@ -35,7 +35,7 @@
 <p *ngIf="selectedProject">Progetto Selezionato: {{selectedProject.name}}</p>
 
 <hr>
-
+<ngprj-project-detail></ngprj-project-detail>
 
 <form #f="ngForm" (ngSubmit)="submitProjectForm(f)" class="row g-3">
     <div class="col-md-4">
