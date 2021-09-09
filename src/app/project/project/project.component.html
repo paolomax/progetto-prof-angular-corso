@@ -40,12 +40,12 @@
 <form #f="ngForm" (ngSubmit)="submitProjectForm(f)" class="row g-3">
     <div class="col-md-4">
       <label for="name" class="form-label">Nome</label>
-      <input type="text" name="name" class="form-control" placeholder="Nome" ngModel>
+      <input type="text" name="name" class="form-control" placeholder="Nome" ngModel required>
       <p class="text-danger"><small>Il campo è richiesto</small></p>
     </div>
     <div class="col-md-4">
       <label for="priority" class="form-label">Priority</label>
-      <select class="form-select" name="priority" ngModel>
+      <select class="form-select" name="priority" ngModel required>
         <option value="low">Low</option>
         <option value="medium">Medium</option>
         <option value="high">High</option>
@@ -54,15 +54,16 @@
     </div>
     <div class="col-md-4">
       <label for="validationDefaultUsername" class="form-label">Date</label>
-      <input type="date" name="start" class="form-control" placeholder="Data di inizio" ngModel>
+      <input type="date" name="start" class="form-control" placeholder="Data di inizio" ngModel required>
       <p class="text-danger"><small>Il campo è richiesto</small></p>
     </div>
     <div class="col-md-12">
       <label for="description" class="form-label">Description</label>
-      <textarea class="form-control" name="description" placeholder="Description" ngModel></textarea>
+      <textarea class="form-control" name="description" placeholder="Description" ngModel required></textarea>
       <p class="text-danger"><small>Il campo è richiesto</small></p>
     </div>
     <div class="col-12">
       <button type="submit" class="w-100 btn btn-primary btn-lg">Crea</button>
     </div>
+    <p>Validità: {{f.valid}}</p>
   </form>
