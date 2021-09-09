@@ -58,7 +58,13 @@ export class ProjectComponent implements OnInit {
   }
 
   submitProjectForm(f: NgForm) {
-    console.log("form submit",f.value);
+    this.projects.push({
+      id:this.projects.length,
+      code: Math.random().toString(36).replace('0.', '').substring(2, 9),
+      done: false,
+      tasks: [],
+      ...f.value
+    });
   }
 
 }
