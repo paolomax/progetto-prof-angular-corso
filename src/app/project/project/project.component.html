@@ -41,9 +41,9 @@
     <div class="col-md-4">
       <label for="name" class="form-label">Nome</label>
       <input type="text" name="name" class="form-control" placeholder="Nome" ngModel required>
-      {{f.controls.nome.value}}
+      {{f.controls.name.value}}
       <!-- {{f.controls?.start?.value}} -->
-      <p class="text-danger"><small>Il campo è richiesto</small></p>
+      <p *ngIf="f.controls?.name?.touched && f.controls?.name?.invalid" class="text-danger"><small>Il campo è richiesto</small></p>
     </div>
     <div class="col-md-4">
       <label for="priority" class="form-label">Priority</label>
