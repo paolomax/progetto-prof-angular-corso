@@ -48,23 +48,23 @@
     </div>
     <div class="col-md-4">
       <label for="priority" class="form-label">Priority</label>
-      <select class="form-select" name="priority" ngModel required>
+      <select class="form-select" name="priority" #priorityField="ngModel" ngModel required>
         <option value="low">Low</option>
         <option value="medium">Medium</option>
         <option value="high">High</option>
       </select>
-      <p class="text-danger"><small>Il campo è richiesto</small></p>
+      <p *ngIf="priorityField.touched && priorityField.invalid" class="text-danger"><small>Il campo è richiesto</small></p>
     </div>
     <div class="col-md-4">
       <label for="validationDefaultUsername" class="form-label">Date</label>
-      <input type="date" name="start" class="form-control" placeholder="Data di inizio" ngModel required>
-      <p class="text-danger"><small>Il campo è richiesto</small></p>
+      <input type="date" name="start" class="form-control" placeholder="Data di inizio" #dateField="ngModel" ngModel required>
+      <p *ngIf="dateField.touched && dateField.invalid" class="text-danger"><small>Il campo è richiesto</small></p>
       <!-- {{f.controls.start.value}} -->
     </div>
     <div class="col-md-12">
       <label for="description" class="form-label">Description</label>
-      <textarea class="form-control" name="description" placeholder="Description" ngModel required></textarea>
-      <p class="text-danger"><small>Il campo è richiesto</small></p>
+      <textarea class="form-control" name="description" placeholder="Description" #descriptionField="ngModel" ngModel required></textarea>
+      <p *ngIf="descriptionField.touched && descriptionField.invalid" class="text-danger"><small>Il campo è richiesto</small></p>
     </div>
     <div class="col-12">
       <button [disabled]="f.invalid" type="submit" class="w-100 btn btn-primary btn-lg">Crea</button>
