@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Project } from '@app/models/Project';
 
 @Component({
@@ -8,7 +8,7 @@ import { Project } from '@app/models/Project';
 })
 export class ProjectDetailComponent implements OnInit {
 
-  project!: Project;
+  @Input() project!: Project;
 
   constructor() { }
 

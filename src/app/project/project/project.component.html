@@ -35,12 +35,13 @@
 <p *ngIf="selectedProject">Progetto Selezionato: {{selectedProject.name}}</p>
 
 <hr>
-<ngprj-project-detail></ngprj-project-detail>
+<ngprj-project-detail [project]="selectedProject"></ngprj-project-detail>
 
 <form #f="ngForm" (ngSubmit)="submitProjectForm(f)" class="row g-3">
     <div class="col-md-4">
       <label for="name" class="form-label">Nome</label>
       <input type="text" name="name" class="form-control" placeholder="Nome" #nameField="ngModel" ngModel required>
+
       {{f.controls.name.value}}
       <!-- {{f.controls?.start?.value}} -->
       <p *ngIf="nameField.touched && nameField.invalid" class="text-danger"><small>Il campo è richiesto</small></p>
