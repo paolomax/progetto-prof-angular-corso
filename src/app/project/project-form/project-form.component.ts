@@ -10,8 +10,11 @@ import { Project } from '@app/models/Project';
 export class ProjectFormComponent implements OnInit {
 
   @Output() submitted = new EventEmitter<Project>();
+  @Output() sendString = new EventEmitter<String>();
 
-  constructor() { }
+  constructor() { 
+    setTimeout(() => this.sendString.emit('Timer Scaduto') ,3000);
+  }
 
   ngOnInit(): void {
   }

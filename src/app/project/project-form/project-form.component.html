@@ -2,8 +2,7 @@
     <div class="col-md-4">
       <label for="name" class="form-label">Nome</label>
       <input type="text" name="name" class="form-control" placeholder="Nome" #nameField="ngModel" ngModel required>
-
-      {{f.controls.name.value}}
+      
       <!-- {{f.controls?.start?.value}} -->
       <p *ngIf="nameField.touched && nameField.invalid" class="text-danger"><small>Il campo è richiesto</small></p>
       <!-- *ngIf="f.controls?.name?.touched && f.controls?.name?.invalid" -->

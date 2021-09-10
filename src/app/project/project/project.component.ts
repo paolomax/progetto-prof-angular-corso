@@ -67,4 +67,7 @@ export class ProjectComponent implements OnInit {
     });
   }
 
+  takeString(str: String) {
+    console.log('Ho ricevuto dal figlio', str);
+  }
 }
