@@ -36,6 +36,6 @@
 
 <ngprj-project-detail [project]="selectedProject"></ngprj-project-detail>
 
-<ngprj-project-form></ngprj-project-form>
+<ngprj-project-form (submitted)="submitProjectForm($event)"></ngprj-project-form>
 
 
