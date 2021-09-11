@@ -1,6 +1,6 @@
 <div
   class="row row-cols-1 row-cols-md-2 g-4"
-  *ngIf="projects.length > 0"
+  *ngIf="projects.length > 0; else noProjects"
 >
   <div class="col" *ngFor="let project of projects">
     <div
@@ -43,3 +43,7 @@
     </div>
   </div>
 </div>
+
+<ng-template #noProjects>
+    <p>Non è presente nessun progetto</p>
+</ng-template>
