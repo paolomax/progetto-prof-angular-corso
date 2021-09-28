@@ -9,6 +9,11 @@ const routes: Routes = [
 ]
 
 @NgModule({
-
+    imports: [
+        RouterModule.forRoot(routes)
+    ],
+    exports: [
+        RouterModule
+    ]
 }) //moduli relativi ad Angular, che istruiscono A su come si comporta l
 export class AppRoutingModule {}

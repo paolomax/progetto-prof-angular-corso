@@ -9,6 +9,7 @@ import { ProjectDetailComponent } from './project/project-detail/project-detail.
 import { ProjectListComponent } from './project/project-list/project-list.component';
 import { ProjectFormComponent } from './project/project-form/project-form.component';
 import { HomeComponent } from './dashboard/home/home.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HomeComponent } from './dashboard/home/home.component';
   imports: [
     BrowserModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
