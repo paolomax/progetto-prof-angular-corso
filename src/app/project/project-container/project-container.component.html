@@ -1,3 +1,5 @@
+<ngprj-section-header [title]="'I miei Progetti'"></ngprj-section-header>
+
 <div class="row mt-5">
     <div class="col-8">
         <h2>I miei progetti </h2>
@@ -7,9 +9,7 @@
     </div>
 </div>
 
-
 <ngprj-project-list [projects] = "projects" (selected)="selectProject($event)"></ngprj-project-list>
-
 
 <hr />
 
