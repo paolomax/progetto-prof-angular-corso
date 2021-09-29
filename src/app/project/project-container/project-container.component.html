@@ -2,8 +2,7 @@
 
 <ngprj-section-header 
   [title]="'I miei Progetti'"
-  [buttonLabel]="'Torna alla Dashboard'"
-  [buttonLink]="'/home'"
+  [button]="{ label: 'Vai alla Dashboard', link:'/home'}"
 ></ngprj-section-header>
 
 <ngprj-project-list [projects] = "projects" (selected)="selectProject($event)"></ngprj-project-list>
