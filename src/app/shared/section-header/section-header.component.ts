@@ -8,6 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SectionHeaderComponent implements OnInit {
   @Input() title = '';
 
+  @Input() buttonLabel = 'Vai a...';
+  @Input() buttonClass = 'btn-link';
+  @Input() buttonLink = '#';
+   
+  
+
   constructor() { }
 
   ngOnInit(): void {
