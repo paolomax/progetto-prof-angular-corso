@@ -6,6 +6,7 @@ import { Project } from '@app/models/Project';
   templateUrl: './project-detail.component.html',
   styleUrls: ['./project-detail.component.css']
 })
+
 export class ProjectDetailComponent implements OnInit {
 
   @Input() project!: Project;
