@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Project } from '@app/models/Project';
 import { LogService } from '@app/shared/log.service';
-import { isWhileStatement } from 'typescript';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -43,12 +44,13 @@ export class ProjectService {
     }
   ];
 
+  projectSubject = new BehaviorSubject<Project[]>(this.projects);
+
   constructor(private logService: LogService) {
   }
 
-  getAll(): Project[] {
-    this.logService.log('getAll Eseguito');
-    return [...this.projects];
+  getAll(): Observable<Project[]> {
+    return this.projectSubject.pipe(tap(() => this.logService.log('getAllEseguito')));
   }
 
   add(project: Project): void {
