@@ -44,7 +44,8 @@ export class ProjectService {
     }
   ];
 
-  projectSubject = new BehaviorSubject<Project[]>(this.projects);
+  private projectSubject = new BehaviorSubject<Project[]>(this.projects);
+  public projects$ = this.projectSubject.asObservable();
 
   constructor(private logService: LogService) {
   }

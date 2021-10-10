@@ -20,7 +20,7 @@ export class ProjectContainerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.projects = this.projectService.getAll();
+    this.projectService.getAll().subscribe((data) => this.projects = data);
   }
 
   selectProject(project: Project) {
