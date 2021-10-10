@@ -64,6 +64,8 @@ export class ProjectService {
       done: false,
       tasks: [],
     });
+
+    this.projectSubject.next(this.projects.slice());
   }
 
   get(id: number): Project {
