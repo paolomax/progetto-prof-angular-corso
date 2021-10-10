@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Project } from '@app/models/Project';
+import { LogService } from '@app/shared/log.service';
+import { isWhileStatement } from 'typescript';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectService {
-
-  constructor() { }
 
   projects: Project[] = [
     {
@@ -43,14 +43,20 @@ export class ProjectService {
     }
   ];
 
+  constructor(private logService: LogService) {
+  }
+
   getAll(): Project[] {
-    return this.projects;
+    this.logService.log('getAll Eseguito');
+    return [...this.projects];
   }
 
   add(project: Project): void {
+    this.logService.log('add Eseguito');
+
     this.projects.push({
       ...project,
-      id:this.projects.length,
+      id: this.projects.length,
       code: Math.random().toString(36).replace('0.', '').substring(2, 9),
       done: false,
       tasks: [],
@@ -58,6 +64,7 @@ export class ProjectService {
   }
 
   get(id: number): Project {
+    this.logService.log('get Eseguito');
     return this.projects.find(project => project.id === id) as Project;
   }
 }
