@@ -31,71 +31,7 @@
       "priority": "low",
       "done": false,
       "tasks": []
-    },
-    {
-      "name": "dasda",
-      "priority": "high",
-      "start": "2021-05-27",
-      "description": "dsadas",
-      "id": 4
-    },
-    {
-      "name": "dasda",
-      "priority": "high",
-      "start": "2021-05-27",
-      "description": "dsadas",
-      "id": 5
-    },
-    {
-      "name": "dasda",
-      "priority": "high",
-      "start": "2021-05-27",
-      "description": "dsadas",
-      "id": 6
-    },
-    {
-      "name": "dasda",
-      "priority": "high",
-      "start": "2021-05-27",
-      "description": "dsadas",
-      "id": 7
-    },
-    {
-      "name": "dasda",
-      "priority": "high",
-      "start": "2021-05-27",
-      "description": "dsadas",
-      "id": 8
-    },
-    {
-      "name": "dasda",
-      "priority": "high",
-      "start": "2021-05-27",
-      "description": "dsadas",
-      "id": 9
-    },
-    {
-      "name": "dasda",
-      "priority": "high",
-      "start": "2021-05-27",
-      "description": "dsadas",
-      "id": 10
-    },
-    {
-      "name": "dasda",
-      "priority": "high",
-      "start": "2021-05-27",
-      "description": "dsadas",
-      "id": 11
-    },
-    {
-      "name": "dasda",
-      "priority": "high",
-      "start": "2021-05-27",
-      "description": "dsadas",
-      "id": 12
     }
   ],
-  "tasks": [
-  ]
+  "tasks": []
 }

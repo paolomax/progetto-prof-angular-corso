@@ -61,7 +61,6 @@ export class ProjectService {
   add(project: Project): Observable<Project> {
     const projectToAdd = {
       ...project,
-      id: this.projects.length,
       code: Math.random().toString(36).replace('0.', '').substring(2, 9),
       done: false,
       tasks: [],
