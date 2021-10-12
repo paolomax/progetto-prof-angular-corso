@@ -26,7 +26,10 @@ export class ProjectContainerComponent implements OnInit, OnDestroy {
   }
 
   selectProject(project: Project) {
-    this.selectedProject = this.projectService.get(project.id);
+    this.subscription = this.projectService.get(project.id).subscribe(data => {
+      this.selectedProject = data;
+    })
+    // this.selectedProject = this.projectService.get(project.id);
   }
 
   submitProjectForm(project: Project) {

@@ -71,9 +71,10 @@ export class ProjectService {
       .pipe(tap((data) => this.logService.log(`add Eseguito ${data}`)));
   }
 
-  get(id: number): Project {
-    this.logService.log('get Eseguito');
-    return this.projects.find(project => project.id === id) as Project;
+  get(id: number): Observable<Project> {
+    return this.httpClient.get<Project>(`http://localhost:3000/projects/${id}`)
+    .pipe(tap((data) => this.logService.log(`get Eseguito ${data}`)));
+    // return this.projects.find(project => project.id === id) as Project;
   }
 }
 
