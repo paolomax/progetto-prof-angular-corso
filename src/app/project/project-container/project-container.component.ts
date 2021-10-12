@@ -30,7 +30,7 @@ export class ProjectContainerComponent implements OnInit, OnDestroy {
   }
 
   submitProjectForm(project: Project) {
-    this.projectService.add(project);
+    this.projectService.add(project).subscribe(data => this.projects$ = this.projectService.getAll());
   }
 
   ngOnDestroy() {

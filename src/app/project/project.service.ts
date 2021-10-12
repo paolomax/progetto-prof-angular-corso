@@ -58,18 +58,17 @@ export class ProjectService {
     // return this.projectSubject.pipe(tap(() => this.logService.log('getAllEseguito')));
   }
 
-  add(project: Project): void {
-    this.logService.log('add Eseguito');
-
-    this.projects.push({
+  add(project: Project): Observable<Project> {
+    const projectToAdd = {
       ...project,
       id: this.projects.length,
       code: Math.random().toString(36).replace('0.', '').substring(2, 9),
       done: false,
       tasks: [],
-    });
+    };
 
-    this.projectSubject.next(this.projects.slice());
+    return this.httpClient.post<Project>('http://localhost:3000/projects', projectToAdd)
+      .pipe(tap((data) => this.logService.log(`add Eseguito ${data}`)));
   }
 
   get(id: number): Project {
