@@ -94,20 +94,8 @@
       "start": "2021-05-27",
       "description": "dsadas",
       "id": 12
-    },
-    {
-      "name": "dasda",
-      "priority": "high",
-      "start": "2021-05-27",
-      "description": "dsadas",
-      "id": 13
-    },
-    {
-      "name": "dasda",
-      "priority": "high",
-      "start": "2021-05-27",
-      "description": "dsadas",
-      "id": 14
     }
+  ],
+  "tasks": [
   ]
 }
