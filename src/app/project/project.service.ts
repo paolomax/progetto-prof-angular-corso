@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Project } from '@app/models/Project';
 import { LogService } from '@app/shared/log.service';
@@ -47,11 +48,14 @@ export class ProjectService {
   private projectSubject = new BehaviorSubject<Project[]>(this.projects);
   public projects$ = this.projectSubject.asObservable();
 
-  constructor(private logService: LogService) {
+  constructor(private httpClient: HttpClient, private logService: LogService) {
   }
 
   getAll(): Observable<Project[]> {
-    return this.projectSubject.pipe(tap(() => this.logService.log('getAllEseguito')));
+    return this.httpClient.get<Project[]>('http://localhost:3000/projects')
+      .pipe(tap((data) => this.logService.log(`getAll Eseguito ${data}`)));
+
+    // return this.projectSubject.pipe(tap(() => this.logService.log('getAllEseguito')));
   }
 
   add(project: Project): void {
