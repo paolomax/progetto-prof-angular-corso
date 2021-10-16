@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Project } from '@app/models/Project';
 import { ProjectService } from '../project.service';
 
@@ -17,8 +17,12 @@ export class ProjectDetailComponent implements OnInit {
     private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.projectService.get(+id!).subscribe(data => console.log(data));
+    // const id = this.activatedRoute.snapshot.paramMap.get('id');
+    // this.projectService.get(+id!).subscribe(data => console.log(data));
+
+    this.activatedRoute.paramMap.subscribe((params: ParamMap) => {
+      console.log(params.get('id'));
+    })
   }
 
 }
