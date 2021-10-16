@@ -4,8 +4,9 @@ import { HomeComponent } from "./dashboard/home/home.component"
 import { ProjectContainerComponent } from "./project/project-container/project-container.component"
 
 const routes: Routes = [
-    { path: 'home', component: HomeComponent},
-    { path: 'projects', component: ProjectContainerComponent}
+    { path: 'projects/detail/:id', component: ProjectContainerComponent},
+    { path: 'projects', component: ProjectContainerComponent},
+    { path: 'home', component: HomeComponent}
 ]
 
 @NgModule({

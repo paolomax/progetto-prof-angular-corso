@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Project } from '@app/models/Project';
 import { Observable, Subscription } from 'rxjs';
 import { ProjectService } from '../project.service';
@@ -17,7 +18,7 @@ export class ProjectContainerComponent implements OnInit, OnDestroy {
   projects: Project[] = [];
   projects$ !: Observable<Project[]>;
 
-  constructor(private projectService: ProjectService) { 
+  constructor(private projectService: ProjectService, private router: Router) { 
   }
 
   ngOnInit(): void {
@@ -26,10 +27,7 @@ export class ProjectContainerComponent implements OnInit, OnDestroy {
   }
 
   selectProject(project: Project) {
-    this.subscription = this.projectService.get(project.id).subscribe(data => {
-      this.selectedProject = data;
-    })
-    // this.selectedProject = this.projectService.get(project.id);
+
   }
 
   submitProjectForm(project: Project) {
