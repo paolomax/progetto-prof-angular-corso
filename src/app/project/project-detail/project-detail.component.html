@@ -1,4 +1,6 @@
-<div class="container-fluid py-5" *ngIf="project">
+<ng-container *ngIf="project$ | async as project" >
+
+<div class="container-fluid py-5">
     <div class="card">
         <div class="card-body">
             <h1 class="display-5 fw-bold">{{project.name}}</h1>
@@ -7,5 +9,5 @@
     </div>
 </div>
 
-<button routerLink="/projects/detail/1">Progetto 1</button>
-<button routerLink="/projects/detail/2">Progetto 2</button>
+
+</ng-container>
