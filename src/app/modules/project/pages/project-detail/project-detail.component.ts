@@ -3,7 +3,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Project } from '@app/models/Project';
 import { Observable, Subscription } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { ProjectService } from '../project.service';
+import { ProjectService } from 'src/app/project/project.service';
 
 @Component({
   selector: 'ngprj-project-detail',

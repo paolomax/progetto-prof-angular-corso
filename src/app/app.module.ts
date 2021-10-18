@@ -5,11 +5,11 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ProjectContainerComponent } from './project/project-container/project-container.component';
-import { ProjectDetailComponent } from './project/project-detail/project-detail.component';
-import { ProjectListComponent } from './project/project-list/project-list.component';
-import { ProjectFormComponent } from './project/project-form/project-form.component';
-import { HomeComponent } from './dashboard/home/home.component';
+import { ProjectDashboardComponent } from './modules/project/pages/project-dashboard/project-dashboard.component';
+import { ProjectDetailComponent } from './modules/project/pages/project-detail/project-detail.component';
+import { ProjectListComponent } from './modules/project/components/project-list/project-list.component';
+import { ProjectFormComponent } from './modules/project/components/project-form/project-form.component';
+import { HomeComponent } from './modules/dashboard/pages/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { SectionHeaderComponent } from './shared/section-header/section-header.component';
@@ -17,9 +17,9 @@ import { SectionHeaderComponent } from './shared/section-header/section-header.c
 @NgModule({
   declarations: [
     AppComponent,
-    ProjectContainerComponent,
-    ProjectDetailComponent,
+    ProjectDashboardComponent,
     ProjectListComponent,
+    ProjectDetailComponent,
     ProjectFormComponent,
     HomeComponent,
     NavbarComponent,
