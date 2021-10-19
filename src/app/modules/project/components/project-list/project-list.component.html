@@ -3,7 +3,13 @@
   *ngIf="projects.length > 0; else noProjects"
 >
   <div class="col" *ngFor="let project of projects">
-    <ngprj-card>
+    <ngprj-card [classes]="{
+
+      'border-info': project.done,
+
+      'border-warning': !project.done
+
+    }">
       <ng-container data-body>
         <h5 class="card-title">
           <span class="badge bg-secondary rounded-pill">{{
