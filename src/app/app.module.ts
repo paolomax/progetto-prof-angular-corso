@@ -8,7 +8,6 @@ import { HomeComponent } from './modules/dashboard/pages/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
-import { ProjectModule } from './modules/project/project.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { ProjectModule } from './modules/project/project.module';
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
-    ProjectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

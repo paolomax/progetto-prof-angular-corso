@@ -4,6 +4,7 @@ import { HomeComponent } from 'src/app/modules/dashboard/pages/home/home.compone
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent},
+    { path: 'projects', loadChildren: () => import('./modules/project/project.module').then(m => m.ProjectModule)},
     { path: '', redirectTo: '/home', pathMatch: 'full'},
     // { path: '**', redirectTo: '/home'}
 ]
