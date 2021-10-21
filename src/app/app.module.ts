@@ -9,16 +9,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
 import { AuthInterceptor } from './core/auth.interceptor';
+import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     NavbarComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule,
+    DashboardModule,
     AppRoutingModule,
     HttpClientModule,
     SharedModule,

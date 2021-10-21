@@ -3,10 +3,10 @@ import { Routes, RouterModule } from '@angular/router'
 import { HomeComponent } from 'src/app/modules/dashboard/pages/home/home.component'
 
 const routes: Routes = [
-    { path: 'home', component: HomeComponent},
+    // { path: 'home', component: HomeComponent},
     { path: 'projects', loadChildren: () => import('./modules/project/project.module').then(m => m.ProjectModule)},
     { path: '', redirectTo: '/home', pathMatch: 'full'},
-    // { path: '**', redirectTo: '/home'}
+    { path: '**', redirectTo: '/home'}
 ]
 
 @NgModule({
